@@ -1,110 +1,116 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/utils.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/mobile.css">
-    <link rel="icon" type="image/jpg" href="img/logo1.png">
-    <title>EasyBlog - Heaven for bloggers</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="css/utils.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/mobile.css" />
+  <!-- file is img/logo1.png, so use image/png -->
+  <link rel="icon" type="image/png" href="img/logo1.png" />
+  <title>EasyBlog - Heaven for bloggers</title>
 </head>
-
 <body>
+  <header>
     <nav class="navigation max-width-1 m-auto">
-        <div class="nav-left">
-            <a href="index.html">
-                <span><img src="img/logo1.png" width="200px" alt=""></span>
-            </a>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </div>
-        <div class="nav-right">
-            <form action="search.html" method="get">
-                <input class="form-input" type="text" name="query" placeholder="Article Search">
-                <button class="btn">Search</button>
-            </form>
-        </div>
+      <div class="nav-left">
+        <a href="index.html" aria-label="EasyBlog home">
+          <span><img src="img/logo1.png" width="200" alt="EasyBlog logo" /></span>
+        </a>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="nav-right">
+        <form action="search.html" method="get" role="search">
+          <input class="form-input" type="text" name="query" placeholder="Article Search" aria-label="Search articles" />
+          <button class="btn" type="submit">Search</button>
+        </form>
+      </div>
     </nav>
+  </header>
 
-    <div class="max-width-1 m-auto"><hr></div>
+  <div class="max-width-1 m-auto"><hr /></div>
 
-    <div class="m-auto content max-width-1 my-2">
-        <div class="content-left">
-            <h1>Welcome to EASYBLOG</h1>
-            <p>EASYBLOG is your go-to platform for sharing ideas, stories, and expertise with the world. Submit your article, and once approved, it will be featured on our site—helping you connect with a wider audience and grow your influence.</p>
-            <p>Whether you’re an experienced writer or just starting your blogging journey, EASYBLOG makes it simple, fast, and enjoyable to publish your thoughts online. Here, every voice matters, and every story has a place.</p>
-        </div>
-        <div class="content-right">
-            <img src="img/home.svg" alt="EasyBlog">
-        </div>
+  <main class="m-auto content max-width-1 my-2">
+    <section class="content-left">
+      <h1>Welcome to EASYBLOG</h1>
+      <p>EASYBLOG is your go-to platform for sharing ideas, stories, and expertise with the world. Submit your article, and once approved, it will be featured on our site—helping you connect with a wider audience and grow your influence.</p>
+      <p>Whether you’re an experienced writer or just starting your blogging journey, EASYBLOG makes it simple, fast, and enjoyable to publish your thoughts online. Here, every voice matters, and every story has a place.</p>
+    </section>
+
+    <aside class="content-right">
+      <img src="img/home.svg" alt="Illustration: EasyBlog homepage" />
+    </aside>
+  </main>
+
+  <div class="max-width-1 m-auto"><hr /></div>
+
+  <section class="home-articles max-width-1 m-auto font2" aria-labelledby="featured-heading">
+    <h2 id="featured-heading">Featured Articles</h2>
+
+    <div class="year-box adjust-year" role="radiogroup" aria-label="Filter by year">
+      <div><h3>Year</h3></div>
+      <div><label><input type="radio" name="year" value="2024"> 2024</label></div>
+      <div><label><input type="radio" name="year" value="2025"> 2025</label></div>
     </div>
 
-    <div class="max-width-1 m-auto"><hr></div>
+    <!-- ONLY this first article links to blogpost.html -->
+    <article class="home-article">
+      <div class="home-article-img"><img src="img/3.png" alt="Diwali decoration" /></div>
+      <div class="home-article-content font1">
+        <a href="blogpost.html"><h3>Home Decoration Ideas for Diwali</h3></a>
+        <p><span>Vaani</span> | <span>07 August</span> | <span>6 min read</span></p>
+      </div>
+    </article>
 
-    <div class="home-articles max-width-1 m-auto font2">
-        <h2>Featured Articles</h2>
-        <div class="year-box adjust-year">
-            <div><h3>Year </h3></div>
-            <div><input type="radio" name="year"> 2024</div>
-            <div><input type="radio" name="year"> 2025</div>
-        </div>
+    <!-- Other tiles are present visually but not linked (only one article desired) -->
+    <article class="home-article">
+      <div class="home-article-img"><img src="img/1.png" alt="Typing keyboard" /></div>
+      <div class="home-article-content font1">
+        <h3>How to increase typing speed</h3>
+        <p><span>Ranveer</span> | <span>10 August</span> | <span>15 min read</span></p>
+      </div>
+    </article>
 
-        <div class="home-article">
-            <div class="home-article-img"><img src="img/3.png" alt="article"></div>
-            <div class="home-article-content font1">
-                <a href="blogpost.html"><h3>Home Decoration Ideas for Diwali</h3></a>
-                <span>Vaani</span> | <span>07 August</span> | <span>6 min read</span>
-            </div>
-        </div>
+    <article class="home-article">
+      <div class="home-article-img"><img src="img/blog.jpg" alt="Writing a blog" /></div>
+      <div class="home-article-content font1">
+        <h3>How To write a Blog</h3>
+        <p><span>Sam</span> | <span>07 August</span> | <span>6 min read</span></p>
+      </div>
+    </article>
 
-        <div class="home-article">
-            <div class="home-article-img"><img src="img/1.png" alt="article"></div>
-            <div class="home-article-content font1">
-                <a href="blogpost.html"><h3>How to increase typing speed</h3></a>
-                <span>Ranveer</span> | <span>10 August</span> | <span>15 min read</span>
-            </div>
-        </div>
+    <article class="home-article">
+      <div class="home-article-img"><img src="img/elite.jpg" alt="Elite speaking" /></div>
+      <div class="home-article-content font1">
+        <h3>How to Talk like Elite</h3>
+        <p><span>Jeff Clark</span> | <span>5 August</span> | <span>6 min read</span></p>
+      </div>
+    </article>
 
-        <div class="home-article">
-            <div class="home-article-img"><img src="img/blog.jpg" alt="article"></div>
-            <div class="home-article-content font1">
-                <a href="blogpost.html"><h3>How To write a Blog</h3></a>
-                <span>Sam</span> | <span>07 August</span> | <span>6 min read</span>
-            </div>
-        </div>
+    <article class="home-article">
+      <div class="home-article-img"><img src="img/pro.jpg" alt="Overcoming procrastination" /></div>
+      <div class="home-article-content font1">
+        <h3>Get Rid off Procrastination</h3>
+        <p><span>Juli</span> | <span>12 August</span> | <span>16 min read</span></p>
+      </div>
+    </article>
 
-        <div class="home-article">
-            <div class="home-article-img"><img src="img/elite.jpg" alt="article"></div>
-            <div class="home-article-content font1">
-                <a href="blogpost.html"><h3>How to Talk like Elite</h3></a>
-                <span>Jeff Clark</span> | <span>5 August</span> | <span>6 min read</span>
-            </div>
-        </div>
+    <article class="home-article">
+      <div class="home-article-img"><img src="img/fluent.jpg" alt="Speaking English" /></div>
+      <div class="home-article-content font1">
+        <h3>How to Speak English Fluently</h3>
+        <p><span>Chetna</span> | <span>11 August</span> | <span>6 min read</span></p>
+      </div>
+    </article>
+  </section>
 
-        <div class="home-article">
-            <div class="home-article-img"><img src="img/pro.jpg" alt="article"></div>
-            <div class="home-article-content font1">
-                <a href="blogpost.html"><h3>Get Rid off Procrastination</h3></a>
-                <span>Juli</span> | <span>12 August</span> | <span>16 min read</span>
-            </div>
-        </div>
-
-        <div class="home-article">
-            <div class="home-article-img"><img src="img/fluent.jpg" alt="article"></div>
-            <div class="home-article-content font1">
-                <a href="blogpost.html"><h3>How to Speak English Fluently</h3></a>
-                <span>Chetna</span> | <span>11 August</span> | <span>6 min read</span>
-            </div>
-        </div>
-    </div>
-
-    <div class="footer">
-        <p>Copyright &copy; EasyBlog.com</p>
-    </div>
+  <footer class="footer">
+    <p>Copyright &copy; EasyBlog.com</p>
+  </footer>
 </body>
 </html>
